@@ -61,7 +61,7 @@ main {
 /* 상단 로고 */
 .tit-timelaw {
   position: relative;
-  margin: 120px;
+  margin: 194px auto 125px auto;
   text-align: center;
 }
 
@@ -90,12 +90,13 @@ main {
 /* 1만시간 정의 */
 .quote-wrapper {
   position: relative;
-  margin: 78px auto 102px;
+  margin: 78px auto 105px;
 }
 
 /* 1만시간 정의-쌍따옴표 */
 .img-quotes {
   position: absolute;
+  /* 위치 잡는거 모르겠음 */
   transform: translate(-50%, 80%);
   width: 493px;
 }
@@ -114,13 +115,8 @@ main {
 
 .txt-desc,
 .tit-desc {
-  line-height: 1.7;
   color: #ffffff;
-}
-
-/* input */
-.cont-inp {
-  position: relative;
+  line-height: 1.7;
 }
 
 /* input-분야 */
@@ -136,14 +132,17 @@ main {
   color: #ffffff;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="number"] {
   /* input 커서 시작점 */
   text-align: center;
-  font-size: 24px;
-  padding: 16px 39px;
-  border-radius: 7px;
+  margin: 0px 17px;
+  padding: 16px 20px;
   width: 228px;
+  height: 57px;
   border: none;
+  border-radius: 7px;
+  font-size: 24px;
 }
 
 /* input-placeholder */
@@ -163,15 +162,17 @@ input:focus {
 
 /* 얼마나 걸릴까 버튼 */
 .btn-exc {
+  position: relative;
+  margin-top: 115px;
   background-color: #fcee21;
-  margin-top: 120px;
-  margin-bottom: 147px;
 }
-
-/* 손꾸락 아이콘 */
+.cont-inp {
+  margin-bottom: 150px;
+}
+/* 손꾸락 아이콘 기준- cont-inp*/
 .point_img {
   position: absolute;
-  bottom: 145px;
+  right: -71px;
 }
 
 /* 결과 첫줄 */
@@ -181,31 +182,29 @@ input:focus {
 
 /* 결과 bold */
 .wannabe-result {
-  font-size: 72px;
-  font-weight: 700;
-  vertical-align: middle;
   margin-left: 12px;
   margin-right: 12px;
+  vertical-align: middle;
+  font-size: 72px;
+  font-weight: 700;
 }
 
-/*  */
 .btn-result-wrapper {
-  margin-top: 127px;
-  margin-bottom: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 127px;
 }
 
 .btn-go {
+  margin-right: 18px;
   background-color: #fcee21;
-  margin-right: 15px;
 }
 
 .cont-footer {
-  font-family: "Noto Sans KR";
-  text-align: center;
   margin-bottom: 70px;
+  text-align: center;
+  font-family: "Noto Sans KR";
 }
 
 .footer-logo-wrapper {
@@ -213,10 +212,10 @@ input:focus {
 }
 
 .txt-footer {
+  color: #ffffff;
   font-size: 12px;
   font-family: 400;
   line-height: 17.38px;
-  color: #ffffff;
 }
 
 /* modal */
@@ -228,21 +227,22 @@ input:focus {
   padding-bottom: 68px;
   background-color: #fff;
   border-radius: 30px;
-  /* top: 50%;
+
+  /* 모달 위치
+  position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
- */
+  transform: translate(-50%, -50%); */
 }
 
 .fighting-img {
+  display: block;
   margin: 0 auto;
-  margin-bottom: 25px;
-  display: block;
+  margin-bottom: 33px;
 }
 
-.fighting-img {
-  display: block;
-  margin-bottom: 44px;
+.cheer-up-img {
+  margin-bottom: 29px;
 }
 
 .licat-img {
@@ -253,4 +253,31 @@ input:focus {
 
 .modal-btn-go {
   background-color: #fcee21;
+}
+
+@keyframes rotate {
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.time {
+  width: 125px;
+  height: 125px;
+}
+
+.time > img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  animation: rotate 1.1s infinite linear;
+}
+
+.cont-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-bottom: 147px; */
 }

@@ -36,37 +36,19 @@
 
         <p class="txt-time">
           그래서 앞으로 매일 하루에
-          <input type="text" placeholder="예)5시간" required />
+          <input type="number" placeholder="예)5" required />
           시간씩 훈련할 것이다.
         </p>
-        <button class="btn-exc">
+        <button class="btn-exc" type="button">
           나는 며칠 동안 훈련을 해야 1만 시간이 될까?
+          <img class="point_img" src="img/click.png" alt="" />
         </button>
-        <img class="point_img" src="img/click.png" alt="" />
       </form>
-      <section id="result" class="cont-result">
-        <h2 class="sr-only">결과 확인</h2>
-        <div class="txt-wannabe-result-wrapper">
-          <p class="txt-wannabe">
-            당신은
-            <strong class="wannabe-result">프로그래밍</strong>
-            전문가가 되기 위해서
-          </p>
-        </div>
-        <p class="txt-time">
-          대략
-          <strong class="wannabe-result">5110</strong>
-          일 이상 훈련하셔야 합니다! :)
-        </p>
-        <div class="btn-result-wrapper">
-          <button class="btn-go">훈련하러 가기 GO!GO!</button>
-          <button class="btn-share">공유하기</button>
-        </div>
-      </section>
+      <section id="result" class="cont-result"></section>
     </main>
     <footer class="cont-footer">
       <div class="footer-logo-wrapper">
-        <img src="img/logo.png" alt="주식회사 위니브" />
+        <img class="footer-logo" src="img/logo.png" alt="주식회사 위니브" />
       </div>
       <p class="txt-footer">
         ※ 본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 WeNiv에 있습니다.<br />
@@ -74,7 +56,7 @@
       </p>
     </footer>
     <section class="cont-modal">
-      <h2 class="blind">응원 모달</h2>
+      <h2 class="sr-only">응원 모달</h2>
       <p>
         <img class="fighting-img" src="./img/화이팅!!♥♥♥.png" alt="" />
         <img
@@ -86,5 +68,6 @@
       <img class="licat-img" src="img/licat.png" alt="응원하는 라이켓" />
       <button class="modal-btn-go">종료하고 진짜 훈련하러 가기 GO!GO!</button>
     </section>
+    <script src="./js/10000hours.js"></script>
   </body>
 </html>
